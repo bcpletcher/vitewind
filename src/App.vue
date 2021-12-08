@@ -14,18 +14,13 @@
 
 	export default {
 		name: 'App',
-		mixins: [Services],
+		mixins: [Services, Helpers],
 		components: {
 		},
 		data: function () {
 			return {
 				loading: false,
 				observer: null,
-				myHelpers: {
-					something() {
-						console.log(this);
-					}
-				}
 			};
 		},
 		computed: {
@@ -49,7 +44,6 @@
 				console.log(e);
 			})
 			this.helpers().thing('cats');
-			this.testService();
 		}
 	};
 </script>
